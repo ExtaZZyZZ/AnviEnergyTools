@@ -2,7 +2,7 @@
 <ConfigParams>
     <Params>
         <noOfCellsSeries>
-            <longName>Cells in series</longName>
+            <longName>Количество ячеек последовательно</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -24,7 +24,7 @@ p, li { white-space: pre-wrap; }
             <vTx>1</vTx>
         </noOfCellsSeries>
         <noOfParallelModules>
-            <longName>Parallel modules count</longName>
+            <longName>Количество ячеек параллельно</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -44,7 +44,7 @@ p, li { white-space: pre-wrap; }
             <vTx>1</vTx>
         </noOfParallelModules>
         <batteryCapacity>
-            <longName>Battery capacity total</longName>
+            <longName>Емкость аккумуляторной сборки</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
             <vTx>1</vTx>
         </cellMonitorICCount>
         <cellHardUnderVoltage>
-            <longName>Minimum allowed charge voltage</longName>
+            <longName>Минимальное напряжение для зарядки</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -124,7 +124,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </cellHardUnderVoltage>
         <cellHardOverVoltage>
-            <longName>Maximum allowed charge voltage</longName>
+            <longName>Максимальное напряжение для зарядки</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -2488,6 +2488,8 @@ p, li { white-space: pre-wrap; }
         <ser>batteryCapacity</ser>
         <ser>cellHardUnderVoltage</ser>
         <ser>cellHardOverVoltage</ser>
+        <ser>hysteresisDischarge</ser>
+        <ser>hysteresisCharge</ser>
         <ser>cellLCSoftUnderVoltage</ser>
         <ser>cellSoftOverVoltage</ser>
         <ser>cellBalanceDifferenceThreshold</ser>
@@ -2513,9 +2515,8 @@ p, li { white-space: pre-wrap; }
         <ser>cellBalanceUpdateInterval</ser>
         <ser>maxSimultaneousDischargingCells</ser>
         <ser>timeoutDischargeRetry</ser>
-        <ser>hysteresisDischarge</ser>
+
         <ser>timeoutChargeRetry</ser>
-        <ser>hysteresisCharge</ser>
         <ser>timeoutChargeCompleted</ser>
         <ser>timeoutChargingCompletedMinimalMismatch</ser>
         <ser>maxMismatchThreshold</ser>
