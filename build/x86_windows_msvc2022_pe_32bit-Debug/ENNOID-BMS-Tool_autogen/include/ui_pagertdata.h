@@ -249,7 +249,7 @@ public:
 
         retranslateUi(PageRtData);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(PageRtData);

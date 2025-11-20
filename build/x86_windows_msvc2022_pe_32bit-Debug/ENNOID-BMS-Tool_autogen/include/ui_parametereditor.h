@@ -863,7 +863,7 @@ public:
         ParameterEditor->setCentralWidget(centralwidget);
         menubar = new QMenuBar(ParameterEditor);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1170, 21));
+        menubar->setGeometry(QRect(0, 0, 1170, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuEdit = new QMenu(menubar);
