@@ -145,8 +145,8 @@ p, li { white-space: pre-wrap; }
             <suffix>V</suffix>
             <vTx>9</vTx>
         </cellHardOverVoltage>
-        <cellLCSoftUnderVoltage>
-            <longName>Cell soft undervoltage</longName>
+        <AllowedMaxCurrentCharge>
+            <longName>Максимальный ток зарядного устройства</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -164,9 +164,9 @@ p, li { white-space: pre-wrap; }
             <stepDouble>0.05</stepDouble>
             <valDouble>2.5</valDouble>
             <vTxDoubleScale>100000</vTxDoubleScale>
-            <suffix>V</suffix>
+            <suffix>A</suffix>
             <vTx>9</vTx>
-        </cellLCSoftUnderVoltage>
+        </AllowedMaxCurrentCharge>
         <cellSoftOverVoltage>
             <longName>Cell soft overvoltage</longName>
             <type>1</type>
@@ -2490,7 +2490,7 @@ p, li { white-space: pre-wrap; }
         <ser>cellHardOverVoltage</ser>
         <ser>hysteresisDischarge</ser>
         <ser>hysteresisCharge</ser>
-        <ser>cellLCSoftUnderVoltage</ser>
+        <ser>AllowedMaxCurrentCharge</ser>
         <ser>cellSoftOverVoltage</ser>
         <ser>cellBalanceDifferenceThreshold</ser>
         <ser>cellBalanceStart</ser>
