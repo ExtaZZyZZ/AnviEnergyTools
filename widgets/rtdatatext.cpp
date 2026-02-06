@@ -117,20 +117,16 @@ void RtDataText::paintEvent(QPaintEvent *event)
     const double vidw = event->rect().width();
 
     // Left info box
-    str.sprintf("V Pack    : %.2f V\n"
-                "I Pack    : %.2f A\n"
-                "P Pack    : %.1f W\n"
-                "CVHigh    : %.3f V\n"
-                "CVAverage : %.3f V\n"
+    str.sprintf("I Channel1: %.2f A\n"
+                "I Channel2: %.2f A\n"
+                "V Pack    : %.2f V\n"
                 "CVLow     : %.3f V\n"
                 "CMismatch : %.3f V\n"
                 "Ah Counter: %.3f A\n"
                 "Wh Counter: %.3f W\n",
-                mValues.packVoltage,
                 mValues.packCurrent,
-                mValues.packCurrent * mValues.packVoltage,
                 mValues.cVHigh,
-                mValues.cVAverage,
+                mValues.packVoltage,
                 mValues.cVLow,
                 mValues.cVMisMatch,
                 mValues.AhCnt,
