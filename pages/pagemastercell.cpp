@@ -54,18 +54,6 @@ void PageMasterCell::setDieBieMS(BMSInterface *dieBieMS)
         ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellMonitorICCount");
         ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "noOfParallelModules");
         ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "noOfCellsSeries");
-        ui->specificationsTab->addRowSeparator(tr("SOC - Pack capacity"));
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "batteryCapacity");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellTypeUsed");
-        ui->specificationsTab->addRowSeparator(tr("Cell specifications"));
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellHardUnderVoltage");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellHardOverVoltage");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "AllowedMaxCurrentCharge");
-     //   ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellHCSoftUnderVoltage");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "cellSoftOverVoltage");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "maxUnderAndOverVoltageErrorCount");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisDischarge");
-        ui->specificationsTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisCharge");
 
         ui->balancingTab->addRowSeparator(tr("Balancing configuration"));
         ui->balancingTab->addParamRow(mDieBieMS->bmsConfig(), "cellBalanceStart");

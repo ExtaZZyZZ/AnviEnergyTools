@@ -714,25 +714,25 @@ p, li { white-space: pre-wrap; }
             <vTx>5</vTx>
         </timeoutDischargeRetry>
         <hysteresisDischarge>
-            <longName>Discharge hysteresis</longName>
+            <longName>Максимальный ток разрядки</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The hysteris value of the load enable condition. Configuring this value correctly will greatly reduce the risk of load output on/off oscillations. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
-            <cDefine>HYST_DISCHARGE</cDefine>
-            <editorDecimalsDouble>3</editorDecimalsDouble>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Максимальный допустимый ток разрядки аккумулятора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MAX_DISCHARGE_CURRENT</cDefine>
+            <editorDecimalsDouble>1</editorDecimalsDouble>
             <editorScale>1</editorScale>
             <editAsPercentage>0</editAsPercentage>
-            <maxDouble>1</maxDouble>
+            <maxDouble>30</maxDouble>
             <minDouble>0</minDouble>
             <showDisplay>0</showDisplay>
-            <stepDouble>0.005</stepDouble>
-            <valDouble>0.02</valDouble>
-            <vTxDoubleScale>100000</vTxDoubleScale>
-            <suffix>V</suffix>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>10</valDouble>
+            <vTxDoubleScale>1000</vTxDoubleScale>
+            <suffix>A</suffix>
             <vTx>9</vTx>
         </hysteresisDischarge>
         <timeoutChargeRetry>
@@ -1240,24 +1240,26 @@ p, li { white-space: pre-wrap; }
             <enumNames>Advanced</enumNames>
         </displayStyle>
         <maxUnderAndOverVoltageErrorCount>
-            <longName>Max OVP &amp; UVP errors</longName>
-            <type>2</type>
+            <longName>Максимальная разница токов каналов</longName>
+            <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Max count of hard cell voltage errors before actually shutting the BMS down. This value allows you to ignore the occationally crossing of the hard cell voltage limits. This is to for example filter out the voltage spikes from extreme EMC situation (ie. static discharge).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
-            <cDefine>MAX_UNDER_OVERVOLTAGE_ERR_COUNT_ERR_COUNT</cDefine>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Максимальная допустимая разница токов между каналами измерения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MAX_CHANNEL_CURRENT_DIFFERENCE</cDefine>
+            <editorDecimalsDouble>2</editorDecimalsDouble>
             <editorScale>1</editorScale>
             <editAsPercentage>0</editAsPercentage>
-            <maxInt>30</maxInt>
-            <minInt>1</minInt>
+            <maxDouble>5.0</maxDouble>
+            <minDouble>0.0</minDouble>
             <showDisplay>0</showDisplay>
-            <stepInt>1</stepInt>
-            <valInt>5</valInt>
-            <suffix></suffix>
-            <vTx>2</vTx>
+            <stepDouble>0.01</stepDouble>
+            <valDouble>0.1</valDouble>
+            <vTxDoubleScale>1000</vTxDoubleScale>
+            <suffix>A</suffix>
+            <vTx>9</vTx>
         </maxUnderAndOverVoltageErrorCount>
         <maxUnderAndOverTemperatureErrorCount>
             <longName>Max OTP &amp; UTP errors</longName>
@@ -2486,96 +2488,10 @@ p, li { white-space: pre-wrap; }
         <ser>batteryCapacity</ser>
         <ser>cellHardUnderVoltage</ser>
         <ser>cellHardOverVoltage</ser>
-        <ser>hysteresisDischarge</ser>
         <ser>hysteresisCharge</ser>
         <ser>AllowedMaxCurrentCharge</ser>
         <ser>cellSoftOverVoltage</ser>
-        <ser>cellBalanceDifferenceThreshold</ser>
-        <ser>cellBalanceStart</ser>
-        <ser>cellBalanceAllTime</ser>
-        <ser>cellThrottleUpperStart</ser>
-        <ser>cellThrottleLowerStart</ser>
-        <ser>cellThrottleUpperMargin</ser>
-        <ser>cellThrottleLowerMargin</ser>
-        <ser>packVoltageDataSource</ser>
-        <ser>packCurrentDataSource</ser>
-        <ser>buzzerSignalSource</ser>
-        <ser>buzzerPersistent</ser>
-        <ser>shuntLCFactor</ser>
-        <ser>voltageLCFactor</ser>
-        <ser>voltageLCOffset</ser>
-        <ser>loadVoltageFactor</ser>
-        <ser>loadVoltageOffset</ser>
-        <ser>chargerVoltageFactor</ser>
-        <ser>chargerVoltageOffset</ser>
-        <ser>throttleChargeIncreaseRate</ser>
-        <ser>throttleDisChargeIncreaseRate</ser>
-        <ser>cellBalanceUpdateInterval</ser>
-        <ser>maxSimultaneousDischargingCells</ser>
-        <ser>timeoutDischargeRetry</ser>
-
-        <ser>timeoutChargeRetry</ser>
-        <ser>timeoutChargeCompleted</ser>
-        <ser>timeoutChargingCompletedMinimalMismatch</ser>
-        <ser>maxMismatchThreshold</ser>
-        <ser>chargerEnabledThreshold</ser>
-        <ser>timeoutChargerDisconnected</ser>
-        <ser>minimalPrechargePercentage</ser>
-        <ser>timeoutLCPreCharge</ser>
-        <ser>maxAllowedCurrent</ser>
-        <ser>maxAllowedChargeCurrent</ser>
-        <ser>allowedTempBattDischargingMax</ser>
-        <ser>allowedTempBattDischargingMin</ser>
-        <ser>allowedTempBattChargingMax</ser>
-        <ser>allowedTempBattChargingMin</ser>
-        <ser>allowedTempBattCoolingMax</ser>
-        <ser>allowedTempBattCoolingMin</ser>
-        <ser>allowedTempBMSMax</ser>
-        <ser>allowedTempBMSMin</ser>
-        <ser>displayTimeoutBatteryDead</ser>
-        <ser>displayTimeoutBatteryError</ser>
-        <ser>displayTimeoutBatteryErrorPreCharge</ser>
-        <ser>displayTimeoutSplashScreen</ser>
-        <ser>displayStyle</ser>
         <ser>maxUnderAndOverVoltageErrorCount</ser>
-        <ser>maxUnderAndOverTemperatureErrorCount</ser>
-        <ser>notUsedCurrentThreshold</ser>
-        <ser>notUsedTimeout</ser>
-        <ser>stateOfChargeStoreInterval</ser>
-        <ser>CANID</ser>
-        <ser>CANIDStyle</ser>
-        <ser>CANBaudRate</ser>
-        <ser>loadCANProtocol</ser>
-        <ser>chargerCANProtocol</ser>
-        <ser>tempEnableMaskBMS</ser>
-        <ser>tempEnableMaskBattery</ser>
-        <ser>tempEnableMaskExpansion</ser>
-        <ser>noOfTempSensorPerModule</ser>
-        <ser>noOfExpansionBoard</ser>
-        <ser>noOfTempSensorPerExpansionBoard</ser>
-        <ser>LCUseDischarge</ser>
-        <ser>LCUsePrecharge</ser>
-        <ser>allowChargingDuringDischarge</ser>
-        <ser>allowForceOn</ser>
-        <ser>pulseToggleButton</ser>
-        <ser>useCANSafetyInput</ser>
-        <ser>useCANDelayedPowerDown</ser>
-        <ser>NTCLTCTopResistor</ser>
-        <ser>NTCLTC25Deg</ser>
-        <ser>NTCLTCBeta</ser>
-        <ser>NTCPCBTopResistor</ser>
-        <ser>NTCPCB25Deg</ser>
-        <ser>NTCPCBBeta</ser>
-        <ser>NTCEXPTopResistor</ser>
-        <ser>NTCEXP25Deg</ser>
-        <ser>NTCEXPBeta</ser>
-        <ser>cellMonitorICType</ser>
-        <ser>cellMonitorICCount</ser>
-        <ser>extEnableState</ser>
-        <ser>chargeEnableState</ser>
-        <ser>powerDownDelay</ser>
-        <ser>humidityICType</ser>
-        <ser>cellTypeUsed</ser>
-
+        <ser>hysteresisDischarge</ser>
     </SerOrder>
 </ConfigParams>

@@ -49,15 +49,17 @@ void PageMasterGeneral::setDieBieMS(BMSInterface *dieBieMS)
     mDieBieMS = dieBieMS;
 
     if (mDieBieMS) {
-        ui->powerStateTab->addRowSeparator(tr("Onstate"));
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "pulseToggleButton");
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "notUsedCurrentThreshold");
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "notUsedTimeout");
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "powerDownDelay");
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "allowForceOn");
-        ui->powerStateTab->addRowSeparator(tr("Jump to"));
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "extEnableState");
-        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "chargeEnableState");
+        ui->powerStateTab->addRowSeparator(tr("SOC - Pack capacity"));
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "batteryCapacity");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "cellTypeUsed");
+        ui->powerStateTab->addRowSeparator(tr("Пределы"));
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "cellHardUnderVoltage");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "cellHardOverVoltage");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "AllowedMaxCurrentCharge");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "cellSoftOverVoltage");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "maxUnderAndOverVoltageErrorCount");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisDischarge");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisCharge");
         ui->masterLimitsTab->addRowSeparator(tr("Current"));
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "maxAllowedCurrent");
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "maxAllowedChargeCurrent");
