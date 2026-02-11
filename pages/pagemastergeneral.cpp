@@ -61,6 +61,8 @@ void PageMasterGeneral::setDieBieMS(BMSInterface *dieBieMS)
         ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisDischarge");
         ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "hysteresisCharge");
         ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "maxAllowedCurrent");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "minDischargeVoltage");
+        ui->powerStateTab->addParamRow(mDieBieMS->bmsConfig(), "maxDischargeVoltage");
         ui->masterLimitsTab->addRowSeparator(tr("Current"));
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "maxAllowedCurrent");
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "maxAllowedChargeCurrent");
