@@ -124,8 +124,8 @@ void RtDataText::paintEvent(QPaintEvent *event)
                 "CMismatch : %.3f V\n"
                 "Ah Counter: %.3f A\n"
                 "Wh Counter: %.3f W\n",
-                mValues.packCurrent,
-                mValues.cVHigh,
+                mValues.loadLCCurrent,
+                mValues.loadHCCurrent,
                 mValues.packVoltage,
                 mValues.cVLow,
                 mValues.cVMisMatch,

@@ -79,15 +79,9 @@ void PageMasterGeneral::setDieBieMS(BMSInterface *dieBieMS)
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "allowedTempBMSMax");
         ui->masterLimitsTab->addParamRow(mDieBieMS->bmsConfig(), "allowedTempBMSMin");
 
-        ui->canTab->addRowSeparator(tr("CAN Configuration"));
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "CANID");
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "CANIDStyle");
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "CANBaudRate");
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "loadCANProtocol");
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "chargerCANProtocol");
-        ui->canTab->addRowSeparator(tr("CAN advanced features"));
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "useCANSafetyInput");
-        ui->canTab->addParamRow(mDieBieMS->bmsConfig(), "useCANDelayedPowerDown");
+        ui->calibrationTab->addRowSeparator(tr("Калибровка напряжений"));
+        ui->calibrationTab->addParamRow(mDieBieMS->bmsConfig(), "calibrationVoltageInput");
+        ui->calibrationTab->addParamRow(mDieBieMS->bmsConfig(), "calibrationVoltageOutput");
 
         ui->masterSensorsTab->addRowSeparator(tr("NTC specifications battery"));
         ui->masterSensorsTab->addParamRow(mDieBieMS->bmsConfig(), "tempEnableMaskBattery");

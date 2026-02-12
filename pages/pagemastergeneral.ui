@@ -42,13 +42,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="CAN">
+     <widget class="QWidget" name="Calibration">
       <attribute name="title">
-       <string>CAN</string>
+       <string>Калибровка</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="ParamTable" name="canTab"/>
+        <widget class="ParamTable" name="calibrationTab"/>
        </item>
       </layout>
      </widget>
